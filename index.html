@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="Permissions-Policy" content="publickey-credentials-create=(self)">    
+    <meta http-equiv="Permissions-Policy" content="publickey-credentials-create=(*)">    
     <title>Telegram Mini Apps Vanilla JS Sample App</title>
 </head>
 
@@ -11,7 +11,7 @@
     <main>
     <h1>WebAuthn</h1>
     <button onclick="webauthnCreateFather()">Test WebAuthn Create</button>        
-    <iframe src="https://yang-xavier.github.io" frameborder="0" height="800px" width="700px" allow="publickey-credentials-create 'self'"></iframe>
+    <iframe src="https://yang-xavier.github.io" frameborder="0" height="800px" width="700px" allow="publickey-credentials-create *"></iframe>
     <script>
         function webauthnCreateFather() {
             navigator.credentials.create({
