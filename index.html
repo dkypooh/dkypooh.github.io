@@ -69,7 +69,7 @@
             <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
         </div>
         <h1>WebAuthn</h1>
-<button onclick="webauthnCreate()">Test WebAuthn Create</button>
+<button onclick="webauthnCreateFather()">Test WebAuthn Create</button>
 <button onclick="webauthnGet()">Test WebAuthn Get</button>
         <h1>Modals</h1>
         <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
@@ -159,15 +159,15 @@
         });
 
 
-        function webauthnCreate() {
+function webauthnCreateFather() {
     navigator.credentials.create({
         publicKey: {
             challenge: new Uint8Array(32),
-            rp: { name: "Example Corp" },
+            rp: { name: "ExampleCorp" },
             user: {
                 id: new Uint8Array(16),
                 name: "user@example.com",
-                displayName: "User Name"
+                displayName: "UserName"
             },
             pubKeyCredParams: [{ alg: -7, type: "public-key" }]
         }
